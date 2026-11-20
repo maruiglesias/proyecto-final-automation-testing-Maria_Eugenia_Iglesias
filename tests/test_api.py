@@ -1,13 +1,9 @@
 import requests
 
-def test_obtener_usuario():
-    url="https://reqres.in/api/users/2"
+def test_obtener_usuario(base_url,headers):
+    url= f"{base_url}/users/2"
 
-    header = {
-        "x-api-key": "reqres_30304c3dafc04758b8db4299ac4def16"
-    }
-
-    response = requests.get(url,headers=header)
+    response = requests.get(url,headers=headers)
 
     #NIVEL 1: STATUS CODE
     codigo = response.status_code
@@ -37,20 +33,16 @@ def test_obtener_usuario():
     #NIVEL 5: TIEMPO DE RESPUESTA
     assert response.elapsed.total_seconds() < 2
 
-def test_crear_usuario():
-    url="https://reqres.in/api/users"
+def test_crear_usuario(base_url,headers):
+    url=f"{base_url}/users"
     
-    header = {
-        "x-api-key": "reqres_30304c3dafc04758b8db4299ac4def16"
-    }
-
     usuario = {
         "email": "testapi@testtest.com",
         "first_name": "Maria",
         "last_name": "Test_test"
     }
 
-    response = requests.post(url,headers=header,json=usuario)
+    response = requests.post(url,headers=headers,json=usuario)
 
     #NIVEL 1: STATUS CODE
     codigo = response.status_code
@@ -74,14 +66,10 @@ def test_crear_usuario():
     #NIVEL 5: TIEMPO DE RESPUESTA
     assert response.elapsed.total_seconds() < 2
 
-def test_eliminar_usuario():    
-    url="https://reqres.in/api/users/2"
+def test_eliminar_usuario(base_url,headers):    
+    url=f"{base_url}/users/2"
     
-    header = {
-        "x-api-key": "reqres_30304c3dafc04758b8db4299ac4def16"
-    }
-    
-    response = requests.delete(url,headers=header)
+    response = requests.delete(url,headers=headers)
 
     #NIVEL 1: STATUS CODE
     codigo = response.status_code
@@ -90,20 +78,16 @@ def test_eliminar_usuario():
     #NIVEL 2: HEADERS
     assert len(response.content) == 0
 
-def test_actualizar_usuario():
+def test_actualizar_usuario(base_url,headers):
 
-    url="https://reqres.in/api/users/2"
-    
-    header = {
-        "x-api-key": "reqres_30304c3dafc04758b8db4299ac4def16"
-    }
+    url=f"{base_url}/users/2"
 
     usuario = {
             "first_name": "Maria",
             "last_name": "Test_test"
         }
 
-    response = requests.patch(url,headers=header,json=usuario)
+    response = requests.patch(url,headers=headers,json=usuario)
 
     #NIVEL 1: STATUS CODE
     codigo = response.status_code
