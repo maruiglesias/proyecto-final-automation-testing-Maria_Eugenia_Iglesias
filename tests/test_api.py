@@ -76,7 +76,13 @@ def test_eliminar_usuario(base_url,headers):
     assert codigo == 204
     
     #NIVEL 2: HEADERS
+    assert "Content-Type" not in response.headers
+
+    #NIVEL 3 Y 4: ESTRUCTURA Y CONTENIDO
     assert len(response.content) == 0
+
+    #NIVEL 5: TIEMPO DE RESPUESTA
+    assert response.elapsed.total_seconds() < 2
 
 def test_actualizar_usuario(base_url,headers):
 
