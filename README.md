@@ -27,11 +27,17 @@ pip install pytest-check
 ```python
 pip install pytest-rerunfailures
 ```
-
+```python
+pip install behave
+```
 ## Ejecución de pruebas
-
+## Pruebas pytest
 ```python
 pytest
+```
+## Pruebas BDD
+```python
+behave
 ```
 
 ## Casos de prueba
@@ -45,6 +51,9 @@ pytest
 - Crear usuario
 - Borrar usuario
 - Actualizar usuario
+### Pruebas BDD
+- Login exitoso
+- Validacion de mensaje de error en Login con credenciales invalidas 
 
 ## Estructura del proyecto
 ├── pages/
@@ -64,6 +73,11 @@ pytest
 │ └── screenshots/
 ├── logs/
 ├── data/
+├── features/
+│ ├──steps/
+| |  └──login_steps.py
+│ ├──environment.py
+│ └──login.feature
 └── README.md
 
 ## Autor
