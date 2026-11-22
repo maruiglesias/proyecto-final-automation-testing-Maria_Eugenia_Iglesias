@@ -9,7 +9,8 @@ def test_login(driver,data):
         logger.info("Prueba Login")
         login_page = LoginPage(driver)
 
-        driver.get("https://www.saucedemo.com/")
+        #driver.get("https://www.saucedemo.com/")
+        login_page.abrir_pagina(driver)
         logger.info("Pagina abierta correctamente")
 
         login_page.login(data["usuario"],data["password"])
