@@ -1,0 +1,6 @@
+2026-11-22 14:03:06,515 INFO talento_tech - Prueba API - Obtener Usuario
+2026-11-22 14:03:07,034 INFO talento_tech - Status Code correcto
+2026-11-22 14:03:07,035 INFO talento_tech - Validacion de headers correcta
+2026-11-22 14:03:07,036 INFO talento_tech - Validacion de la estructura de la respuesta
+2026-11-22 14:03:07,036 INFO talento_tech - Validacion de los datos dentro de la respuesta
+2026-11-22 14:03:07,853 INFO talento_tech - Tiempo de respuesta valido

@@ -1,4 +1,5 @@
 import requests
+import pytest_check as check
 from utils.logger import logger
 
 def test_obtener_usuario(base_url,headers):
@@ -24,18 +25,18 @@ def test_obtener_usuario(base_url,headers):
         assert "data" in data
         assert isinstance(data["data"],dict)
 
-        assert "id" in data["data"]
-        assert "email" in data["data"]
-        assert "first_name" in data["data"]
-        assert "last_name" in data["data"]
-        logger.info("Estructura de la respuesta correcta")
+        logger.info("Validacion de la estructura de la respuesta")
+        check.is_in("id",data["data"]) #assert "id" in data["data"]
+        check.is_in("email",data["data"]) #assert "email" in data["data"]
+        check.is_in("first_name",data["data"]) #assert "first_name" in data["data"]
+        check.is_in("last_name",data["data"]) #assert "last_name" in data["data"]
 
         #NIVEL 4: CONTENIDO
-        assert data["data"]["id"] == 2
-        assert data["data"]["email"] == "janet.weaver@reqres.in"
-        assert data["data"]["first_name"] == "Janet"
-        assert data["data"]["last_name"] == "Weaver"
-        logger.info("Datos dentro de la respuesta correctos")
+        logger.info("Validacion de los datos dentro de la respuesta")
+        check.equal(data["data"]["id"],2) # assert data["data"]["id"] == 2
+        check.equal(data["data"]["email"],"janet.weaver@reqres.in") # assert data["data"]["email"] == "janet.weaver@reqres.in"
+        check.equal(data["data"]["first_name"],"Janet") # assert data["data"]["first_name"] == "Janet"
+        check.equal(data["data"]["last_name"],"Weaver") # assert data["data"]["last_name"] == "Weaver"
 
         #NIVEL 5: TIEMPO DE RESPUESTA
         assert response.elapsed.total_seconds() < 2
@@ -69,19 +70,19 @@ def test_crear_usuario(base_url,headers):
         logger.info("Validacion de headers correcta")
 
         #NIVEL 3: ESTRUCTURA
+        logger.info("Validacion de estructura de la respuesta")
         data = response.json()
-        assert "id" in data
-        assert "email" in data
-        assert "first_name" in data
-        assert "last_name" in data
-        logger.info("Estructura de la respuesta correcta")
-
+        check.is_in("id",data) #assert "id" in data
+        check.is_in("email",data) #assert "email" in data
+        check.is_in("first_name",data) #assert assert "first_name" in data
+        check.is_in("last_name",data) #assert "last_name" in data
+        
         #NIVEL 4: CONTENIDO
-        assert data["email"] == usuario["email"]
-        assert data["first_name"] == usuario["first_name"]
-        assert data["last_name"] == usuario["last_name"]
-        logger.info("Datos dentro de la respuesta correctos")
-
+        logger.info("Validacion de los datos dentro de la respuesta")
+        check.equal(data["email"],usuario["email"]) #assert data["email"] == usuario["email"]
+        check.equal(data["first_name"],usuario["first_name"]) #assert data["first_name"] == usuario["first_name"]
+        check.equal(data["last_name"],usuario["last_name"]) #assert data["last_name"] == usuario["last_name"]
+        
         #NIVEL 5: TIEMPO DE RESPUESTA
         assert response.elapsed.total_seconds() < 2
         logger.info("Tiempo de respuesta valido")
@@ -138,15 +139,15 @@ def test_actualizar_usuario(base_url,headers):
         logger.info("Validacion de headers correcta")
 
         #NIVEL 3: ESTRUCTURA
+        logger.info("Validacion de estructura de la respuesta")
         data = response.json()
-        assert "first_name" in data
-        assert "last_name" in data
-        logger.info("Estructura de la respuesta correcta")
+        check.is_in("first_name",data) #assert "first_name" in data
+        check.is_in("last_name",data) #assert "last_name" in data
         
         #NIVEL 4: CONTENIDO
-        assert data["first_name"] == usuario["first_name"]
-        assert data["last_name"] == usuario["last_name"]
-        logger.info("Datos dentro de la respuesta correctos")
+        logger.info("Validacion de los datos dentro de la respuesta")
+        check.equal(data["first_name"],usuario["first_name"]) #assert data["first_name"] == usuario["first_name"]
+        check.equal(data["last_name"],usuario["last_name"]) #assert data["last_name"] == usuario["last_name"]
         
         #NIVEL 5: TIEMPO DE RESPUESTA
         assert response.elapsed.total_seconds() < 2

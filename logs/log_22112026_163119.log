@@ -1,0 +1,36 @@
+2026-11-22 16:31:20,152 INFO talento_tech - Prueba Login
+2026-11-22 16:31:20,652 INFO talento_tech - Pagina abierta correctamente
+2026-11-22 16:31:20,925 INFO talento_tech - Ingreso de credenciales
+2026-11-22 16:31:20,980 INFO talento_tech - Login exitoso
+2026-11-22 16:31:24,468 INFO talento_tech - Prueba Login
+2026-11-22 16:31:24,806 INFO talento_tech - Pagina abierta correctamente
+2026-11-22 16:31:25,045 INFO talento_tech - Ingreso de credenciales
+2026-11-22 16:31:25,157 ERROR talento_tech - Error durante la prueba de login
+Traceback (most recent call last):
+  File "C:\Users\MEI\OneDrive\Escritorio\Curso-QA-Automation\proyecto-final-automation-testing-Maria_Eugenia_Iglesias\tests\test_login.py", line 24, in test_login
+    assert 'Epicss sadface' in error
+AssertionError: assert 'Epicss sadface' in 'Epic sadface: Username and password do not match any user in this service'
+2026-11-22 16:31:34,119 INFO talento_tech - Prueba Login
+2026-11-22 16:31:34,502 INFO talento_tech - Pagina abierta correctamente
+2026-11-22 16:31:34,759 INFO talento_tech - Ingreso de credenciales
+2026-11-22 16:31:34,796 ERROR talento_tech - Error durante la prueba de login
+Traceback (most recent call last):
+  File "C:\Users\MEI\OneDrive\Escritorio\Curso-QA-Automation\proyecto-final-automation-testing-Maria_Eugenia_Iglesias\tests\test_login.py", line 24, in test_login
+    assert 'Epicss sadface' in error
+AssertionError: assert 'Epicss sadface' in 'Epic sadface: Username and password do not match any user in this service'
+2026-11-22 16:31:38,397 INFO talento_tech - Prueba Login
+2026-11-22 16:31:39,071 INFO talento_tech - Pagina abierta correctamente
+2026-11-22 16:31:39,789 INFO talento_tech - Ingreso de credenciales
+2026-11-22 16:31:39,877 ERROR talento_tech - Error durante la prueba de login
+Traceback (most recent call last):
+  File "C:\Users\MEI\OneDrive\Escritorio\Curso-QA-Automation\proyecto-final-automation-testing-Maria_Eugenia_Iglesias\tests\test_login.py", line 24, in test_login
+    assert 'Epicss sadface' in error
+AssertionError: assert 'Epicss sadface' in 'Epic sadface: Username and password do not match any user in this service'
+2026-11-22 16:31:49,715 INFO talento_tech - Prueba Login
+2026-11-22 16:31:50,011 INFO talento_tech - Pagina abierta correctamente
+2026-11-22 16:31:50,245 INFO talento_tech - Ingreso de credenciales
+2026-11-22 16:31:50,286 ERROR talento_tech - Error durante la prueba de login
+Traceback (most recent call last):
+  File "C:\Users\MEI\OneDrive\Escritorio\Curso-QA-Automation\proyecto-final-automation-testing-Maria_Eugenia_Iglesias\tests\test_login.py", line 24, in test_login
+    assert 'Epicss sadface' in error
+AssertionError: assert 'Epicss sadface' in 'Epic sadface: Username and password do not match any user in this service'

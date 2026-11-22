@@ -3,6 +3,7 @@ import pytest
 from utils.reader import read_users_csv
 from utils.logger import logger
 
+@pytest.mark.flaky(reruns=1, reruns_delay=5)
 @pytest.mark.parametrize("data",read_users_csv())
 def test_login(driver,data):
     try:

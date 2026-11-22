@@ -31,6 +31,9 @@ def pytest_runtest_makereport(item,call):
     if report.when == "call" and report.failed:
         driver = item.funcargs.get("driver")
 
+        if driver is None:
+            return
+
         carpeta = pathlib.Path("reports/screenshots")
         carpeta.mkdir(parents=True,exist_ok=True)
         archivo = carpeta / f"{item.name}.png"

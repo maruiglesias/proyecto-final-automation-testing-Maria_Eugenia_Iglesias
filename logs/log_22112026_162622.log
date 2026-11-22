@@ -1,0 +1,32 @@
+2026-11-22 16:26:25,527 INFO talento_tech - Prueba Inventario
+2026-11-22 16:26:25,527 INFO talento_tech - Ingreso de credenciales correctas para iniciar sesion
+2026-11-22 16:26:26,651 INFO talento_tech - Pagina abierta correctamente
+2026-11-22 16:26:26,937 INFO talento_tech - Sesion iniciada correctamente
+2026-11-22 16:26:26,992 INFO talento_tech - Titulo de la pagina correcto
+2026-11-22 16:26:27,006 INFO talento_tech - Productos de la pagina capturados para posterior validacion
+2026-11-22 16:26:27,007 INFO talento_tech - Validacion de cantidad de productos
+2026-11-22 16:26:27,102 ERROR talento_tech - Error durante la prueba de inventario
+Traceback (most recent call last):
+  File "C:\Users\MEI\OneDrive\Escritorio\Curso-QA-Automation\proyecto-final-automation-testing-Maria_Eugenia_Iglesias\tests\test_inventory.py", line 31, in test_inventory
+    assert inventory_page.obtener_precio_primer_producto() == "$9.99"
+AssertionError: assert '$29.99' == '$9.99'
+  
+  [0m[91m- $9.99[39;49;00m[90m[39;49;00m
+  [92m+ $29.99[39;49;00m[90m[39;49;00m
+  ?  +[90m[39;49;00m
+2026-11-22 16:26:36,559 INFO talento_tech - Prueba Inventario
+2026-11-22 16:26:36,560 INFO talento_tech - Ingreso de credenciales correctas para iniciar sesion
+2026-11-22 16:26:36,897 INFO talento_tech - Pagina abierta correctamente
+2026-11-22 16:26:37,211 INFO talento_tech - Sesion iniciada correctamente
+2026-11-22 16:26:37,272 INFO talento_tech - Titulo de la pagina correcto
+2026-11-22 16:26:37,285 INFO talento_tech - Productos de la pagina capturados para posterior validacion
+2026-11-22 16:26:37,286 INFO talento_tech - Validacion de cantidad de productos
+2026-11-22 16:26:37,351 ERROR talento_tech - Error durante la prueba de inventario
+Traceback (most recent call last):
+  File "C:\Users\MEI\OneDrive\Escritorio\Curso-QA-Automation\proyecto-final-automation-testing-Maria_Eugenia_Iglesias\tests\test_inventory.py", line 31, in test_inventory
+    assert inventory_page.obtener_precio_primer_producto() == "$9.99"
+AssertionError: assert '$29.99' == '$9.99'
+  
+  [0m[91m- $9.99[39;49;00m[90m[39;49;00m
+  [92m+ $29.99[39;49;00m[90m[39;49;00m
+  ?  +[90m[39;49;00m

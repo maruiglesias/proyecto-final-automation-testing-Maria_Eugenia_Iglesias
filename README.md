@@ -24,6 +24,9 @@ pip install pytest-html
 ```python
 pip install pytest-check
 ```
+```python
+pip install pytest-rerunfailures
+```
 
 ## Ejecución de pruebas
 

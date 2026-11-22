@@ -1,0 +1,21 @@
+2026-11-22 14:31:21,957 INFO talento_tech - Prueba API - Obtener Usuario
+2026-11-22 14:31:22,501 INFO talento_tech - Status Code correcto
+2026-11-22 14:31:22,501 INFO talento_tech - Validacion de headers correcta
+2026-11-22 14:31:22,501 INFO talento_tech - Validacion de la estructura de la respuesta
+2026-11-22 14:31:22,502 INFO talento_tech - Validacion de los datos dentro de la respuesta
+2026-11-22 14:31:22,502 INFO talento_tech - Tiempo de respuesta valido
+2026-11-22 14:31:22,504 INFO talento_tech - Prueba API - Crear Usuario
+2026-11-22 14:31:22,990 INFO talento_tech - Status Code correcto
+2026-11-22 14:31:22,991 INFO talento_tech - Validacion de headers correcta
+2026-11-22 14:31:22,991 INFO talento_tech - Validacion de estructura de la respuesta
+2026-11-22 14:31:22,992 INFO talento_tech - Validacion de los datos dentro de la respuesta
+2026-11-22 14:31:22,992 INFO talento_tech - Tiempo de respuesta valido
+2026-11-22 14:31:23,295 INFO talento_tech - Status Code correcto
+2026-11-22 14:31:23,295 INFO talento_tech - Validacion de headers correcta
+2026-11-22 14:31:23,295 INFO talento_tech - Estructura y contenido de la respuesta correcta - sin datos
+2026-11-22 14:31:23,295 INFO talento_tech - Tiempo de respuesta valido
+2026-11-22 14:31:23,564 INFO talento_tech - Status Code correcto
+2026-11-22 14:31:23,565 INFO talento_tech - Validacion de headers correcta
+2026-11-22 14:31:23,565 INFO talento_tech - Validacion de estructura de la respuesta
+2026-11-22 14:31:23,633 INFO talento_tech - Validacion de los datos dentro de la respuesta
+2026-11-22 14:31:23,633 INFO talento_tech - Tiempo de respuesta valido
