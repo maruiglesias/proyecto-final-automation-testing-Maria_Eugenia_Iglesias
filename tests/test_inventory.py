@@ -8,11 +8,12 @@ def test_inventory(driver):
         login_page = LoginPage(driver)
         inventory_page = InventoryPage(driver)
 
+        logger.info("Ingreso de credenciales correctas para iniciar sesion")
         driver.get("https://www.saucedemo.com/")
         logger.info("Pagina abierta correctamente")
 
         login_page.login("standard_user","secret_sauce")
-        logger.info("Ingreso de credenciales")
+        logger.info("Sesion iniciada correctamente")
 
         #Validacion titulo pagina
         assert driver.title == 'Swag Labs'
@@ -20,7 +21,9 @@ def test_inventory(driver):
 
         #Validacion presencia de productos
         productos = inventory_page.obtener_productos()
+        logger.info("Productos de la pagina capturados para posterior validacion")
 
+        logger.info("Validacion de cantidad de productos")
         assert len(productos) > 0
 
         #Validacion nombre/precio del primer producto

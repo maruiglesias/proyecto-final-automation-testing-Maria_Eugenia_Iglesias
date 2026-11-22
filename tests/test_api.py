@@ -90,7 +90,6 @@ def test_crear_usuario(base_url,headers):
         logger.exception("Error durante la prueba API crear usuario")
         raise    
 
-
 def test_eliminar_usuario(base_url,headers): 
     try:   
         url=f"{base_url}/users/2"
@@ -133,7 +132,7 @@ def test_actualizar_usuario(base_url,headers):
         codigo = response.status_code
         assert codigo == 200
         logger.info("Status Code correcto")
-        
+
         #NIVEL 2: HEADERS
         assert "application/json" in response.headers["Content-Type"]
         logger.info("Validacion de headers correcta")
@@ -154,5 +153,5 @@ def test_actualizar_usuario(base_url,headers):
         logger.info("Tiempo de respuesta valido")
 
     except Exception:
-        logger.exception("Error durante la prueba API borrar usuario")
+        logger.exception("Error durante la prueba API actualizar usuario")
         raise     
