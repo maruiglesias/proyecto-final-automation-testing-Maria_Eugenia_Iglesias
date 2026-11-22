@@ -1,0 +1,13 @@
+2026-11-21 20:33:38,751 INFO talento_tech - Prueba Inventario
+2026-11-21 20:33:39,242 INFO talento_tech - Pagina abierta correctamente
+2026-11-21 20:33:39,522 INFO talento_tech - Ingreso de credenciales
+2026-11-21 20:33:39,578 INFO talento_tech - Titulo de la pagina correcto
+2026-11-21 20:33:39,651 ERROR talento_tech - Error durante la prueba de inventario
+Traceback (most recent call last):
+  File "C:\Users\MEI\OneDrive\Escritorio\Curso-QA-Automation\proyecto-final-automation-testing-Maria_Eugenia_Iglesias\tests\test_inventory.py", line 28, in test_inventory
+    assert inventory_page.obtener_precio_primer_producto() == "$2.99"
+AssertionError: assert '$29.99' == '$2.99'
+  
+  [0m[91m- $2.99[39;49;00m[90m[39;49;00m
+  [92m+ $29.99[39;49;00m[90m[39;49;00m
+  ?   +[90m[39;49;00m
