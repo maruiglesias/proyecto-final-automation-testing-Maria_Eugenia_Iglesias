@@ -21,6 +21,9 @@ pip install selenium
 ```python
 pip install pytest-html
 ```
+```python
+pip install pytest-check
+```
 
 ## Ejecución de pruebas
 
@@ -29,22 +32,35 @@ pytest
 ```
 
 ## Casos de prueba
-
+### Pruebas UI
 - Login exitoso
+- Validacion de mensaje de error en Login con credenciales invalidas 
 - Validacion pagina Inventory
-- Agregar productos al carrito
-
+- Agregar productos al carrito y validar su contenido
+### Pruebas API
+- Obtener usuario
+- Crear usuario
+- Borrar usuario
+- Actualizar usuario
 
 ## Estructura del proyecto
- 
-├── test/
+├── pages/
+│ ├── login_page.py
+| ├── inventory_page.py
+│ └── cart_page.py
+├── tests/
 │ ├── test_login.py
 | ├── test_inventory.py
-│ └── test_cart.py
+│ ├── test_cart.py
+│ └── test_api.py
 ├── utils/
-│ └── login.py
+│ ├── logger.py
+│ └── reader.py
 ├── reports/
-│ └── reporte.html
+│ ├──reporte.html
+│ └── screenshots/
+├── logs/
+├── data/
 └── README.md
 
 ## Autor
